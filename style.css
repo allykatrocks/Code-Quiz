@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    justify-content: flex-start;
+    background-color: bisque;
+}
+
+button {
+    background-color: blueviolet;
+    color: cornsilk;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 30px;
+    max-width: 210px;
+}
+
+header{
+    background-color: blueviolet;
+    color: cornsilk;
+}
+
+nav {
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+}
