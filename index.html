@@ -11,11 +11,24 @@
 <header>
     <h1>Code Quiz</h1>
     <nav>
-      <a href="" class="highscores">View Highscores</a>
+      <ul>
+      <li>
+        <a href="" class="highscores">View Highscores</a>
+      </li>
+      <li>
       <div class="timer" id="timer">Time Left:</div>
+      </li>
+    </ul>
     </nav>
 </header>
-<button class="button" id="start-button">Begin Quiz</button>
-  <script src="./script.js"></script>  
+<main>
+<div class = "visible" id="start-menu">
+  <h2>Welcome to the Coding Quiz!</h2>
+  <p>Answer as many questions as you can before time runs out. Be aware that incorrect choices will shorten your time! Good luck!</p>
+  <button class="button" id="start-button">Begin Quiz</button>
+</div>
+<div class="hidden" id="question-container"></div>
+  <script src="./script.js"></script> 
+</main>   
 </body>
 </html>

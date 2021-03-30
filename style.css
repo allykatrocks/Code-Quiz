@@ -12,6 +12,10 @@ body {
     background-color: bisque;
 }
 
+h2 {
+    text-align: center;
+}
+
 button {
     background-color: blueviolet;
     color: cornsilk;
@@ -19,6 +23,7 @@ button {
     cursor: pointer;
     font-size: 30px;
     max-width: 210px;
+    margin-left: 600px;
 }
 
 header{
@@ -30,4 +35,26 @@ nav {
     margin-right: 20px;
     float: right;
     font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+nav a {
+    color: cornsilk;
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
