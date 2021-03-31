@@ -58,3 +58,12 @@ p {
 .hidden {
     display: none;
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    #start-button {
+        flex-direction: column;
+    }
+}
