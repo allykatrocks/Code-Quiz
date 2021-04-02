@@ -56,7 +56,7 @@ function startTime() {
     timerInterval = setInterval(function() {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            // run end game function
+            endGame();
         } 
         timeLeft--;
        timer.textContent = "Time Left: " + timeLeft;
