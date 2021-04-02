@@ -117,5 +117,5 @@ function endGame() {
     highscoreList.push({"initials": initials, "score": score});
     localStorage.setItem("highscore", JSON.stringify(highscoreList));
 
-    var hs = JSON.parse(localStorage.getItem("highscore")) || [];
+    window.location.assign("./highscores.html");
 }
