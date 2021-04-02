@@ -106,12 +106,13 @@ document.querySelector("#initials-submit").addEventListener("click", function() 
 })
 
 function getInitials() {
+    document.getElementById("YourScore").textContent = "Your score is " + score;
     document.querySelector("#end-screen").classList.remove("hidden");
+    questionContainerElement.setAttribute("class", "hidden");
 }
 
 function endGame() {
     hasGameEnded = true;
-    questionContainerElement.setAttribute("class", "hidden");
     endGameElement.setAttribute("class","visible");
     highscoreList.push({"initials": initials, "score": score});
     localStorage.setItem("highscore", JSON.stringify(highscoreList));

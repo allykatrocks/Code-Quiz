@@ -16,3 +16,7 @@ header{
     background-color: blueviolet;
     color: cornsilk;
 }
+
+tr {
+    text-align: center;
+}

@@ -23,7 +23,7 @@ button {
     cursor: pointer;
     font-size: 30px;
     max-width: 210px;
-    margin-left: 600px;
+    margin-left: 40%;
 }
 
 header{
@@ -66,5 +66,6 @@ p {
     }
     #start-button {
         flex-direction: column;
+        margin-left: 30%;
     }
 }
