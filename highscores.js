@@ -14,6 +14,6 @@ data.forEach(element => {
 });
 
 
-// get timer to stop at 0 not -1
+
 // use something other than alerts for correct/incorrect answers
 // fix css on 1, 3, & 4

@@ -40,6 +40,8 @@ var questions = [
     }
 
 ];
+var correctAnswerEl = document.querySelector("#correct");
+var incorrectAnswerEl = document.querySelector("#incorrect"); 
 var hasGameEnded = false;
 var endGameElement = document.querySelector("#end-screen");
 var initials = "";
@@ -54,16 +56,18 @@ startButton.addEventListener("click", function(){
 
 function startTime() {
     timerInterval = setInterval(function() {
+        if (timeLeft > 0) {
+            timeLeft--;
+        }
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             hasGameEnded = true;
             document.getElementById("YourScore").textContent = "Your score is " + score;
             questionContainerElement.setAttribute("class", "hidden");
             endGameElement.setAttribute("class","visible");
-            
-            
+             
         } 
-        timeLeft--;
+        
        timer.textContent = "Time Left: " + timeLeft;
        
     }, 1000)
@@ -88,10 +92,10 @@ function startQuestions() {
 
 function checkAnswer() {
     if (this.textContent === questions[gameIndex].answer) {
-        alert("Correct!");
+        correctAnswerEl.setAttribute("class", "visible");
         score++;
     } else {
-        alert("Incorrect!");
+        incorrectAnswerEl.setAttribute("class", "visible");
         timeLeft -= 10;
     }
     gameIndex++;
