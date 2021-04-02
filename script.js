@@ -116,4 +116,6 @@ function endGame() {
     endGameElement.setAttribute("class","visible");
     highscoreList.push({"initials": initials, "score": score});
     localStorage.setItem("highscore", JSON.stringify(highscoreList));
+
+    var hs = JSON.parse(localStorage.getItem("highscore")) || [];
 }
