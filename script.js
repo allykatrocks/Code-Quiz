@@ -56,7 +56,12 @@ function startTime() {
     timerInterval = setInterval(function() {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            endGame();
+            hasGameEnded = true;
+            document.getElementById("YourScore").textContent = "Your score is " + score;
+            questionContainerElement.setAttribute("class", "hidden");
+            endGameElement.setAttribute("class","visible");
+            
+            
         } 
         timeLeft--;
        timer.textContent = "Time Left: " + timeLeft;
@@ -84,11 +89,9 @@ function startQuestions() {
 function checkAnswer() {
     if (this.textContent === questions[gameIndex].answer) {
         alert("Correct!");
-        // use something else
         score++;
     } else {
         alert("Incorrect!");
-        // use something else
         timeLeft -= 10;
     }
     gameIndex++;
