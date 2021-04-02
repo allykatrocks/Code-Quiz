@@ -40,6 +40,8 @@ var questions = [
     }
 
 ];
+var hasGameEnded = false;
+var endGameElement = document.querySelector("#end-screen");
 var initials = "";
 var score = 0;
 var highscoreList = JSON.parse(localStorage.getItem("highscore")) || [];
@@ -89,12 +91,10 @@ function checkAnswer() {
         // use something else
         timeLeft -= 10;
     }
-    console.log(this.textContent)
-    console.log("button clicked")
     gameIndex++;
     if (gameIndex > 4) {
         clearInterval(timerInterval);
-        endGame();
+        getInitials();
     } else {
         startQuestions();
     }
@@ -102,10 +102,17 @@ function checkAnswer() {
 }
 document.querySelector("#initials-submit").addEventListener("click", function() {
     initials = document.querySelector("#initials").value;
-    console.log(initials);
+    endGame();
 })
 
+function getInitials() {
+    document.querySelector("#end-screen").classList.remove("hidden");
+}
+
 function endGame() {
+    hasGameEnded = true;
+    questionContainerElement.setAttribute("class", "hidden");
+    endGameElement.setAttribute("class","visible");
     highscoreList.push({"initials": initials, "score": score});
     localStorage.setItem("highscore", JSON.stringify(highscoreList));
 }
