@@ -93,9 +93,11 @@ function startQuestions() {
 function checkAnswer() {
     if (this.textContent === questions[gameIndex].answer) {
         correctAnswerEl.setAttribute("class", "visible");
+        setTimeout(function(){correctAnswerEl.setAttribute("class", "hidden")}, 250);
         score++;
     } else {
         incorrectAnswerEl.setAttribute("class", "visible");
+        setTimeout(function(){incorrectAnswerEl.setAttribute("class", "hidden")}, 250);
         timeLeft -= 10;
     }
     gameIndex++;

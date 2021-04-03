@@ -23,7 +23,12 @@ button {
     cursor: pointer;
     font-size: 30px;
     max-width: 210px;
-    margin-left: 40%;
+    margin-left: 45%;
+    display: block;
+}
+
+input {
+    margin-left: 43%;
 }
 
 

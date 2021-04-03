@@ -15,5 +15,5 @@ data.forEach(element => {
 
 
 
-// use something other than alerts for correct/incorrect answers
-// fix css on 1, 3, & 4
+
+
